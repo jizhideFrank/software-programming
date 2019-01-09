@@ -1,0 +1,10 @@
+name: Yuan Xu
+UtorID: xuyuan9
+
+Discussion:
+I believe my program will not cause major starvation.
+
+
+For each lane, we have car_arrive() and car_cross(), a monitor is used to ensure necessary synchronization. When buffer is ready, there are chances for either thread to acquire the lock and perform its own task. When one car is crossing the quadrants, other car will not have access to the quadrants, this prevents deadlock. Most importantly, the lock of a lane would be released whenever a car leaves the buffer and the order of cars acquiring locks is stictly forced by rules. 
+
+Some corner case where starvation could possibly happen: for example, if there are infinite cars from North to South, the road from North and South will be totally blocked. There will be no way for cars from East to West or West to East. This is where starvation happen.
