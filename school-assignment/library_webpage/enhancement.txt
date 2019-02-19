@@ -1,0 +1,5 @@
+1. For adding new book or new patron, user must provide enough information, otherwise alert meg appear
+2. For checking book info and loan out books, user must provide correct info, otherwise alert meg appear
+	a bad input will be, e.g. if book not in the list or patron doesnt exist
+3. avoid bad input such as non-integer input
+4. Adding popularity system to the library, counts how many times a book was borrowed.
