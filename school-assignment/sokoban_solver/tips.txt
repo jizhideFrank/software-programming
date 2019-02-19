@@ -1,0 +1,17 @@
+For those who attemp this problem for the first time, below is my suggestions
+
+1. carefully real assignment instruction and starter code, figure out the
+	relationship between sokoban class and search class
+
+2. when implement herustic function, start with manhattan distance first
+
+3. improve the manhattan distance herustic by removing all the deadlock cases 
+
+4. the hardest part is to find way to assign each robot to the closest box and
+	assign each box to the closest storage
+
+
+In my algorithm, numpy is used for generate distance matrix between box and
+storage, scipy is used for assignment function. scipy helps to find total minimum
+distance between boxes and storages. The assignment function used hungarian algorithm
+to find each optimal pairs in the matrix, so that overall distance would be lowest.
